@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic List</title>
+    <title>Dynamisk Liste</title>
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <h1>Dynamic List Example</h1>
-    <input type="text" id="inputField" placeholder="Enter item" />
-    <button id="addButton">Add to List</button>
-    <ul id="list"></ul>
+    <main>
+      <div>
+        <h1>Dynamisk liste</h1>
+        <label for="inputField">
+          Skriv noe her..
+          <input type="text" name="inputField" id="inputField" placeholder="Skriv noe her.." />
+        </label>
+
+        <ul id="list"></ul>
+
+        <button id="addButton">Legg til listen</button>
+      </div>
+    </main>
   </body>
 </html>
