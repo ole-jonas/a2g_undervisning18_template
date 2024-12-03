@@ -12,3 +12,30 @@ li {
   color: red;
   cursor: pointer;
 }
+/* Basic styling for the list */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+}
+
+/* Style for the remove button */
+.remove-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: darkred;
+}
