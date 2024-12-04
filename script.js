@@ -5,7 +5,7 @@ const addButton = document.querySelector("#addButton");
 
 // Function to add a new item to the list
 function addItem() {
-  const inputField = inputField.value;
+  const inputValue = inputField.value;
 
   // Check if the input field is not empty
   if (inputValue.trim() !== "") {
@@ -32,6 +32,9 @@ function addItem() {
 
     // Clear the input field
     inputField.value = "";
+
+    // Sort the list items alphabetically
+    sortList();
 }
 }
 
@@ -39,7 +42,27 @@ function addItem() {
 function removeItem(listItem) {
   // Remove the list item from the DOM
   listItem.remove();
+
+  // Re-sort the list after an item is removed
+  sortList();
 }
+
+// Function to sort the list items
+function sortList() {
+  // Get all the list items
+  const listItems = Array.from(list.children);
+
+  // Sort the list items alphabetically
+  listItems.sort((a, b) => a.textContent.localeCompare(b.textContent));
+
+  // Remove all list items from the DOM before re-adding them in sorted order
+  list.innerHTML = "";
+
+  // Append each list item back to the list in sorted order
+  listItems.forEach(item => list.appendChild(item));
+
+}
+
 
 // Event listener for the Add button
 addButton.addEventListener("click", addItem);
